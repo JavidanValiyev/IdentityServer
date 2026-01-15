@@ -52,18 +52,6 @@ public static class IdentityServiceConfigurations
 
         services.AddScoped<DatabaseInitialiser>();
         services.AddScoped<TokenProviderService>();
-        // services.AddMassTransit(configurator =>
-        // {
-        //     configurator.SetDefaultEndpointNameFormatter();
-        //     configurator.UsingRabbitMq((context, cfg) =>
-        //     {
-        //         cfg.Host(configurationManager.GetValue<string>("RabbitMq:Host"), "/", h =>
-        //         {
-        //             h.Username(configurationManager.GetValue<string>("RabbitMq:UserName")!);
-        //             h.Password(configurationManager.GetValue<string>("RabbitMq:Password")!);
-        //         });
-        //     });
-        // });
         return services;
     }
 
