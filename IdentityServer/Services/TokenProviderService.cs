@@ -28,7 +28,6 @@ public class TokenProviderService(UserManager<ApplicationUser> userManager,
         [
             new(JwtRegisteredClaimNames.Sub, user.Id),
             new(JwtRegisteredClaimNames.Email, user.Email!),
-            new(JwtRegisteredClaimNames.FamilyName,user.TenantId.ToString()),
 
         ];
         claims.AddRange(roles.Select(x=>new Claim(ClaimTypes.Role,x)).ToList());
